@@ -1,0 +1,64 @@
+\begin{titlepage}
+\begin{center}
+
+% 1. The title of the thesis/dissertation, centered 2" below the top of the page
+\vspace{2in}
+\begin{singlespace}
+\large %\bf
+\MakeUppercase{\mytitle}
+\end{singlespace}
+
+
+% 2. Your name, centered 1" below the title.
+\vspace{61pt} % 1 in = 72pt, 11pt for the line with text
+\large \myname
+
+
+%3. The following statement, within the full margins, 1" below your name:
+%"A dissertation [or thesis] submitted to the faculty of the University of North Carolina at Chapel Hill in partial fulfillment of the requirements for the degree of	in the Department [or School or Curriculum] of      ."
+
+\vspace{61pt}
+\begin{singlespace}
+\noindent \large
+A dissertation submitted to the faculty of the University of North Carolina at Chapel Hill
+in partial fulfillment of the requirements for the degree of 
+Doctor of Philosophy 
+in the 
+Department of Physics and Astronomy.
+\end{singlespace}
+
+
+%4. On the lower half of the page, centered, the words "Chapel Hill"
+%and one line below that, the year in which your committee approves
+%the completed thesis/dissertation.
+\vspace{61pt}
+\begin{singlespace} \large
+Chapel Hill\\
+\myyear
+\end{singlespace}
+\end{center}
+
+%5. On the right-hand side of the page, "Approved by," followed by lines for the
+%signatures of the adviser and four (two for thesis) readers. List
+
+% The lengths in this section must be adjusted manually through the 
+%	\settowidth and \hspace
+% commands to make 2/3rds across page
+
+\vspace{40pt}
+\begin{flushright}
+\newlength{\mycommitteelength}
+\settowidth{\mycommitteelength}{LONGEST NAME GOES HERE}
+\begin{minipage}[t]{\mycommitteelength} \large
+Approved by:\\
+%To be approved by: \\
+\myadvisor \\
+COMMITTEE MEMBER 2 \\
+COMMITTEE MEMBER 3 \\
+COMMITTEE MEMBER 4 \\
+COMMITTEE MEMBER 5
+\end{minipage}
+\end{flushright}
+
+\end{titlepage}
+\clearpage

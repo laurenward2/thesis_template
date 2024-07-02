@@ -1,0 +1,118 @@
+% THE TITLE OF THE THESIS
+\def\myname{Your Name Here}
+\def\myadvisor{Your Advisor's Name}
+\def\mytitle{A Template Dissertation for Students of Physics and Astronomy}
+\def\myyear{2022}
+
+% citation style
+
+% default: cite with (Name, year)
+\renewcommand{\cite}{\citep}
+
+% common abbreviations
+\newcommand{\eg}{{\it e.g.}\xspace}
+\newcommand{\ie}{{\it i.e.}\xspace}
+\newcommand{\etc}{{\it etc.}\xspace}
+\newcommand{\etal}{\emph{et~al}\mbox{.}\xspace}
+
+\newcommand{\vs}{{vs\mbox{.}}\xspace}
+
+\newcommand{\defeq}[0]{\triangleq}
+\renewcommand{\mod}{\operatorname{mod}}
+
+
+% algorithm names
+\newcommand{\kwfont}[1]{\textsf{#1}\xspace} %\small
+% variable name
+\newcommand{\var}[1]{\ensuremath{{\fun{#1}}}\xspace} %\small
+
+%http://hstuart.dk/2007/08/03/programming-latex-%E2%80%94-writing-commands/
+%\newcommand{\mkkw}[2]{
+%	\newcommand{#1}[0]{\kwfont{#2}}
+%}
+
+
+\newcommand{\MESA}{{\tt MESA}\xspace}
+\newcommand{\WDEC}{{\tt WDEC}\xspace}
+\newcommand{\BV}{{Brunt-V\"ais\"al\"a}\xspace}
+
+%basic math commands
+\newcommand{\into}{\rightarrow}
+\newcommand{\abs}[1]{\left\vert #1 \right\vert}
+%derivaties
+\newcommand{\del}[2]{\frac{\partial#1}{\partial #2}}
+\newcommand{\dif}[2]{\frac{d#1}{d#2}}
+%shortcuts
+\newcommand{\xhat}{x}
+\newcommand{\rhat}{\hat{r}}
+\newcommand{\rbar}{\bar{r}}
+\newcommand{\Mstar}{{M_\star}}
+\newcommand{\Rstar}{{R_\star}}
+\newcommand{\Lstar}{{L_\star}}
+\newcommand{\Msolar}{{M_\odot}}
+\newcommand{\Rsolar}{{R_\odot}}
+\newcommand{\Lsolar}{{L_\odot}}
+\newcommand{\Rearth}{{R_{\oplus}}}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\rad}{\mathrm{rad}}
+\newcommand{\Teff}{{T_{\mathrm{eff}}}}
+
+
+
+\renewcommand{\ln}{\log}
+
+\newcommand{\pn}[1]{{\sc#1pn}\xspace}  
+
+% src code
+\newcommand{\src}[1]{\textsf{\small #1}\xspace}
+\newcommand{\tcode}[1]{\text{\tt#1}}
+
+%vector stuff
+\newcommand{\bvec}[1]{{\vec{#1}\,}} % a vector with space to breathe!  use with superscripts
+\newcommand{\bracket}[2]{\left\langle#1,#2\right\rangle} % an inner product
+\newcommand{\m}[1]{\mathbf{#1}}
+\newcommand{\mxi}{\boldsymbol{\xi}}
+\newcommand{\dotprod}{\boldsymbol{\cdot}} % the typical scalar product
+\newcommand{\innerprod}[2]{\left\langle#1\right\vert\left.\vphantom{#1}#2\right\rangle}
+\newcommand{\innerprodN}[2]{\left(#1\right\vert\left.\vphantom{#1}#2\right)}
+
+
+% references
+\newcommand{\chref}[1]{Chapter~\ref{ch:#1}\xspace}
+\newcommand{\chrefs}[2]{Chapters~\ref{ch:#1} and~\ref{ch:#2}\xspace}
+\newcommand{\secref}[1]{Section~\ref{sec:#1}\xspace}
+\newcommand{\subsecref}[1]{Section~\ref{subsec:#1}\xspace}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}\xspace}
+\newcommand{\figrefi}[2]{Figure~\ref{fig:#1}(#2)\xspace}
+\newcommand{\tabref}[1]{Table~\ref{tab:#1}\xspace}
+\newcommand{\equref}[1]{(\ref{eq:#1})\xspace}
+\newcommand{\equsref}[1]{(\ref{eq:#1})\xspace}
+\newcommand{\equrefs}[2]{(\ref{eq:#1},\ref{eq:#2})\xspace}
+\newcommand{\pref}[1]{page~\pageref{p:#1}\xspace}
+% citations
+
+% parameters
+
+\newcommand{\pacc}[0]{\var{pacc}}
+\newcommand{\wratio}[0]{\var{wratio}}
+
+% special footnotes
+
+% from http://help-csli.stanford.edu/tex/latex-footnotes.shtml
+\long\def\symbolfootnote[#1]#2{\begingroup%
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
+
+%% Flush words right at end of paragraph.
+%% From: http://tex.stackexchange.com/questions/16330/hfill-after-linebreak
+\newcommand\rightparend[1]{{%
+      \unskip\nobreak\hfil\penalty50
+      \hskip2em\hbox{}\nobreak\hfil\textbf{#1}%
+      \parfillskip=0pt \finalhyphendemerits=0 \par}}
+
+
+\defcitealias{FullLai11}{FL11}
+\defcitealias{PresTeuk77}{PT77}
+\defcitealias{ChriMull94}{JCD-DJM}
+\defcitealias{PoisWill14}{P\&W}
+\defcitealias{MisnThorWhee73}{MTW}
+

@@ -1,0 +1,114 @@
+%% ##############################################################################################################
+%  This dissertation template is a modification of the Bj\"orn Brandenburg template
+%  The old template is available here: https://www.cs.unc.edu/~bbb/
+%  Some minor adjustments were made to account for the inexplicable rule changes of UNC since 2013
+%  You are free to use these template files, but do not use any of the included example figures.
+%    S Reece Boston, April 2022
+%% ##############################################################################################################
+
+\chapter{A Chapter Using Tables\label{ch:chapter3}}
+
+
+\section{How to make convincing sections}
+\lipsum[3][4-6]
+See \tabref{chapter3:cutler} for further details.  
+\lipsum[6][3]
+
+%%%% TABLE cutler lindblom
+\begin{table}
+\begin{center}
+\begin{tabular}{l|ccc|cccc}
+\hline\hline
+	& \multicolumn{3}{c|}{Newtonian} 
+	& \multicolumn{4}{c}{Post-Newtonian, $z=0.2256$}\\
+$\ell$	
+	& $\bar{\omega}_{2022}$ & $\bar{\omega}_\text{1992}$ & \% err 
+	& $\bar{\omega}_{2022}$ & RMSR & $\bar{\omega}_\text{1992}$ & rel. dif.
+	\\
+	\hline
+$2$ 
+	& 1.227 & 1.226 & 0.05\%      % RMSR=10^{-7}
+	& 1.317 & 0.07 & 1.232 & 0.06
+	\\
+$3$ 
+	& 1.698 & 1.697 & 0.05\%      % RMSR=10^{-7}
+	& 1.694 & 0.06 & 1.606 & 0.05
+	\\
+$4$ 
+	& 2.037 & 2.036 & 0.03\%     % RMSR=10^{-7}
+	& 1.984 & 0.05 & 1.885 & 0.05
+	\\
+$5$ 
+	& 2.310  & 2.309 & 0.03\%    % RMSR=10^{-7}
+	& 2.228 & 0.05 & 2.120 & 0.05
+	\\
+$6$ 
+	& 2.546 & 2.545 & 0.02\%     % RMSR=10^{-7}
+	& 2.444 & 0.04 & 2.324 & 0.05
+	\\
+\hline
+\end{tabular}
+\end{center}
+\caption[Comparison of \pn1 dipole ($l=1$)  modes to \citet{CutlLind92}]{
+	Comparison of fundamental frequencies for corresponding \pn0, \pn1 models with \citet{CutlLind92}.  
+	Mass, radius as in their Table 1.
+	All models are a polytrope with $n=1$.
+\label{tab:chapter3:cutler}}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lipsum[5-6]
+
+\section{Tables could be placed here}
+
+\lipsum[9][8]
+See \tabref{chapter3:lindblom} below for full figures.
+\lipsum[3]
+
+%%%% TABLE lindblom mendell ipser
+\begin{table}
+\begin{center}
+\begin{tabular}{l|cc|cc|cc}
+\hline\hline
+ & \multicolumn{2}{c|}{2022}
+ & \multicolumn{4}{c} {1997, $z=0.01869$ }\\
+\hline
+ & \multicolumn{2}{c|}{\pn1}
+ & \multicolumn{2}{c|}{\pn1}
+ & \multicolumn{2}{c }{GR}\\
+$\ell$	& $\bar{\omega}$ & RMSR 
+        & $\bar{\omega}$ & rel. dif. 
+	    & $\bar{\omega}$ & rel. dif.\\
+	\hline
+$2$ & 1.279 & $0.05$ & 1.231 & 0.04 & 1.201 & 0.06\\
+$3$ & 1.687 & $0.05$ & 1.619 & 0.04 & 1.586 & 0.06\\
+$4$ & 1.989 & $0.04$ & 1.907 & 0.04 & 1.874 & 0.06\\
+$5$ & 2.240 & $0.04$ & 2.147 & 0.04 & 2.113 & 0.06\\
+\hline
+\end{tabular}
+\end{center}
+\caption[Comparison of \pn1 dipole ($l=1$)  modes to \citet{LindMendIpse97}]{
+	Comparison of fundamental frequencies for corresponding \pn1, GR models with \citet{LindMendIpse97}.  
+	Mass, radius as in their Table 1.
+	All models are a polytrope with $n=1$.
+\label{tab:chapter3:lindblom}}
+\end{table}
+
+\lipsum[56]
+
+\section{A fuller picture}
+
+\lipsum[5]
+
+\lipsum[1][2]
+In \tabref{n=0} we have tabulated this for many examples.
+\lipsum[11]
+
+\lipsum[23]
+
+%%% TABLE: n=0, L=1,2,3, k=0,...,15
+\input{./chapter3/tables/N=0.00.txt}
+
+\section{Conclusion}
+\lipsum[64-65]
+

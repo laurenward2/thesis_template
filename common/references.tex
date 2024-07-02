@@ -1,0 +1,85 @@
+% this will create the bibliography with correct formatting
+% this uses the APA (or NASA/ADS) citation style of Name (year)
+%   rather than the PRD style of [number]
+% to format as [number], need to make changes to 
+%   \bibliographystyle
+% below
+
+\clearpage
+\phantomsection
+
+
+\def\araa{ARA\&A}
+\def\actaa{Acta Astron.}
+\def\ao{Appl.!Opt.}
+\def\aj{AJ}
+\def\azh{Azh}
+\def\aap{A\&A}
+\def\aapr{A\&Rv}
+\def\apj{ApJ}
+\def\apjl{ApJ}
+\def\apjs{ApJS}
+\def\aplett{Astrophy.~Lett.}
+\def\apss{Ap\&SS}
+\def\aps{Ap\&SS}
+\def\aaps{A\&AS}
+\def\astap{A\&A}
+\def\baas{BAAS}
+\def\bain{Bull.~Astron.~Inst.~Netherlands}
+\def\caa{Chinese Astron.~Asrophys.}
+\def\cjaa{Chinese J.~Astron.~Astrophys.}
+\def\fcp{Fundamentals Cosmic Phys.}
+\def\gca{Geochimica Cosmochimica Acta}
+\def\grl{Geophys.~Res.~Lett.}
+\def\iaucirc{IAU Circ.}
+\def\icarus{Icarus}
+\def\jcp{J.~Chem.~Phys.}
+\def\jgr{J.~Geophys.~Res.}
+\def\jcap{J.~Cosmology Astropart.~Phys.}
+\def\jqsrt{J.~Quant.~Spectrosc.~Radiative Transfer}
+\def\jrasc{J.~R.~Astron.~Soc.~Canada}
+\def\memras{Mem.~RAS}
+\def\memsai{Mem.~Soc.~Astron.~Italiana} 
+\def\mnras{MNRAS}
+\def\na{New Astron.}
+\def\nar{New Astron.~Rev}
+\def\nat{Mature}
+\def\nphysa{Nuclear Phys.~A}
+\def\physscr{Phys.~Scr}
+\def\pra{Phys.~Rev.~A}
+\def\prb{Phys.~Rev.~B}
+\def\prc{Phys.~Rev.~C}
+\def\prd{Phys.~Rev.~D}
+\def\pre{Phys.~Rev.~E}
+\def\prl{Phys.~Rev.~Lett.}
+\def\physrep{Phys.~Rep.}
+\def\planss{Planet.~Space Sci.}
+\def\procspie{Proc.~SPIE}
+\def\pasa{Publ.~Astron.~Soc.~Australia}
+\def\pasj{PASJ}
+\def\pasp{PASP}
+\def\qjras{QJRAS}
+\def\rmxaa{Rev.~Mex.~Astron.~Astrofis.}
+\def\skytel{Sky \& Telesc.}
+\def\solphys{Sol.~Phys.}
+\def\ssr{Space Sci.~Rev.}\def\sovast{Societ Ast.}
+\def\zap{Z.~Astrophys}
+
+
+{\def\chapter*#1{} % suppress bibliograph header.
+\begin{singlespace}
+\addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
+\begin{center}
+\large \textbf{BIBLIOGRAPHY}
+\vspace{17pt}
+\end{center}
+
+\bibliographystyle{apalike}
+\bibliography{master}
+\end{singlespace}
+}
+
+
+
+
+

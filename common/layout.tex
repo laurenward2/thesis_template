@@ -1,0 +1,50 @@
+% Use proper margins.
+\geometry{letterpaper,left=1.25in,top=1in,right=1.0in,bottom=1in,nohead}
+
+% double-space text
+\doublespacing
+
+% Indent paragraphs four spaces throughout the thesis/dissertation.
+\setlength{\parindent}{4ex}
+
+% Center chapter titles, omit page numbers.
+%\titleformat{\chapter}[display]{\fillast\bfseries}{\Large\MakeUppercase{\chaptertitlename} \thechapter}{-11pt}{\huge\singlespacing}[\thispagestyle{empty}]
+\titleformat{\chapter}[block]{\large\centering\bfseries}{\MakeUppercase{\chaptertitlename}~\thechapter:\quad~}{0pt}{}
+
+\titleformat{\section}[hang]{\large\bfseries}{\thesection\quad~}{0pt}{}
+\titleformat{\subsection}[hang]{\bfseries}{\thesubsection\quad~}{0pt}{}
+\titleformat{\subsubsection}[hang]{\bfseries}{\thesubsubsection\quad~}{0pt}{}
+
+% Extend to 2in top margins
+% Leave 22pts = 2x font size after heading
+\titlespacing{\chapter}{0in}{0.62in}{22pt}
+
+% Tweak spacing of paragraph labels.
+\titlespacing{\paragraph}{0in}{0.08in}{0.07in}
+
+% We want numbered subsubsections
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% We need to double-space between footnotes.
+\setlength{\footnotesep}{13pt}
+
+% We don't want crazy vertical spacing.
+\raggedbottom
+% We are required to make it look ugly
+% this creates a ragged right that doesn't reset parindent to zero
+% see https://tex.stackexchange.com/questions/185970/raggedright-removes-paragraph-indentation
+%\makeatletter
+%\newcommand\iraggedright{%
+%  \let\\\@centercr\@rightskip\@flushglue \rightskip\@rightskip
+%  \leftskip\z@skip}
+%\makeatother
+%\iraggedright
+
+% We don't want abandoned words.
+\clubpenalty=10000 
+\widowpenalty=10000
+
+% Prevent awkward hyphenations.
+\hyphenation{Raj-kumar}
+

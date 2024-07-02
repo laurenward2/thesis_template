@@ -1,0 +1,20 @@
+%% This is how you can include appendices consistent with the formatting requirements
+%  UNC requires appendices formatted differently than normal chapters
+%  There are two stages:
+%    1. adding a line to the TOC
+%    2. creating the formatted chapter title
+%  Make sure both the TOC entry and the title match -- this won't be done automatically
+%  If there is only one appendix, remove the 'A' designation
+
+\addcontentsline{toc}{chapter}{APPENDIX A:~~THE NAME OF THE APPENDIX IN ALL CAPS}
+\titlespacing{\chapter}{0in}{-.32in}{0pt}
+\chapter*{APPENDIX A:~~THE NAME OF THE APPENDIX IN ALL CAPS}\label{ch:appendixA}
+\setcounter{chapter}{1}
+
+\lipsum[1]
+
+\section{A section name}
+\lipsum[3]
+
+\section{Another section name}
+\lipsum[4]

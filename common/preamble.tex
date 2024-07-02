@@ -1,0 +1,52 @@
+\documentclass[11pt,letterpaper,oneside]{report}
+
+% Layout
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage[indentafter]{titlesec}
+\usepackage[subfigure]{tocloft}
+\usepackage{multicol}
+% these options are required for the precision alignment the grad school demands with footnotes
+\usepackage[bottom,hang,flushmargin,multiple]{footmisc}
+
+% this does nothing but create fake text -- remove if you don't need it
+\usepackage{lipsum}
+
+
+% Citation style
+\usepackage[sort&compress]{natbib}
+\usepackage{apalike}
+
+% include citations inline
+\usepackage{bibentry}
+\nobibliography*
+
+% Figures
+\usepackage{empheq}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{subfigure}
+\usepackage{xspace}  
+\usetikzlibrary{calc, math, intersections, decorations.pathreplacing}
+
+
+% Math
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Typography
+\usepackage{times}
+\usepackage{microtype}
+\usepackage{textcomp}
+
+% Macro support
+\usepackage{xspace}
+
+% PDF links
+\usepackage[hidelinks]{hyperref} % backref=page
+
+
+\input{common/layout}
+
+\input{common/macros}

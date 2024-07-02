@@ -1,0 +1,42 @@
+## IGNORE EVERYTHING -- MANUALLY INCLUDE INSTEAD
+*
+
+## EXCEPTIONS
+#basic
+!.gitignore
+!README.md
+!diss.pdf
+!diss.tex
+
+## CHAPTERS
+# chapter 1
+!chapter1/
+!chapter1/intro.tex
+
+# chapter 2
+!chapter2/
+!chapter2/chapter2.tex
+!chapter2/graphs/
+!chapter2/graphs/*
+
+
+# chapter 3
+!chapter3/
+!chapter3/chapter3.tex
+!chapter3/tables/
+!chapter3/tables/*
+
+# conclusion
+!conclusion/
+!conclusion/conclusion.txt
+
+# appendix
+!appendix/
+!appendix/appendixA.tex
+!appendix/appendixB.tex
+
+## FRONTMATTER
+!common/
+!frontmatter/
+!common/*
+!frontmatter/*

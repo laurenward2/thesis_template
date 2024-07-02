@@ -1,0 +1,28 @@
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+%\renewcommand{\cfttoctitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cfttoctitlefont}{\large\hfill\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill\null}
+\renewcommand{\cftdotsep}{1.5}
+\cftsetrmarg{1.0in}
+
+\setlength{\cftbeforetoctitleskip}{61pt}
+\setlength{\cftaftertoctitleskip}{28pt}
+
+% format chapter entries like other entries
+\renewcommand{\cftchapfont}{\normalfont}
+\renewcommand{\cftchappagefont}{\normalfont}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+\setcounter{tocdepth}{2}
+
+\setlength{\cftbeforechapskip}{15pt}
+\setlength{\cftbeforesecskip}{10pt}
+\setlength{\cftbeforesubsecskip}{10pt}
+\setlength{\cftbeforesubsubsecskip}{10pt}
+
+\begin{singlespace}
+\tableofcontents
+\end{singlespace}
+
+
+\clearpage

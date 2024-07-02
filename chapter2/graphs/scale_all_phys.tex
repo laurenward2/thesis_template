@@ -1,0 +1,132 @@
+% GNUPLOT: LaTeX picture with Postscript
+\begingroup
+  \makeatletter
+  \providecommand\color[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package color not loaded in conjunction with
+      terminal option `colourtext'%
+    }{See the gnuplot documentation for explanation.%
+    }{Either use 'blacktext' in gnuplot or load the package
+      color.sty in LaTeX.}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\includegraphics[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package graphicx or graphics not loaded%
+    }{See the gnuplot documentation for explanation.%
+    }{The gnuplot epslatex terminal needs graphicx.sty or graphics.sty.}%
+    \renewcommand\includegraphics[2][]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \@ifundefined{ifGPcolor}{%
+    \newif\ifGPcolor
+    \GPcolorfalse
+  }{}%
+  \@ifundefined{ifGPblacktext}{%
+    \newif\ifGPblacktext
+    \GPblacktexttrue
+  }{}%
+  % define a \g@addto@macro without @ in the name:
+  \let\gplgaddtomacro\g@addto@macro
+  % define empty templates for all commands taking text:
+  \gdef\gplbacktext{}%
+  \gdef\gplfronttext{}%
+  \makeatother
+  \ifGPblacktext
+    % no textcolor at all
+    \def\colorrgb#1{}%
+    \def\colorgray#1{}%
+  \else
+    % gray or color?
+    \ifGPcolor
+      \def\colorrgb#1{\color[rgb]{#1}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color[rgb]{1,0,0}}%
+      \expandafter\def\csname LT1\endcsname{\color[rgb]{0,1,0}}%
+      \expandafter\def\csname LT2\endcsname{\color[rgb]{0,0,1}}%
+      \expandafter\def\csname LT3\endcsname{\color[rgb]{1,0,1}}%
+      \expandafter\def\csname LT4\endcsname{\color[rgb]{0,1,1}}%
+      \expandafter\def\csname LT5\endcsname{\color[rgb]{1,1,0}}%
+      \expandafter\def\csname LT6\endcsname{\color[rgb]{0,0,0}}%
+      \expandafter\def\csname LT7\endcsname{\color[rgb]{1,0.3,0}}%
+      \expandafter\def\csname LT8\endcsname{\color[rgb]{0.5,0.5,0.5}}%
+    \else
+      % gray
+      \def\colorrgb#1{\color{black}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color{black}}%
+      \expandafter\def\csname LT1\endcsname{\color{black}}%
+      \expandafter\def\csname LT2\endcsname{\color{black}}%
+      \expandafter\def\csname LT3\endcsname{\color{black}}%
+      \expandafter\def\csname LT4\endcsname{\color{black}}%
+      \expandafter\def\csname LT5\endcsname{\color{black}}%
+      \expandafter\def\csname LT6\endcsname{\color{black}}%
+      \expandafter\def\csname LT7\endcsname{\color{black}}%
+      \expandafter\def\csname LT8\endcsname{\color{black}}%
+    \fi
+  \fi
+    \setlength{\unitlength}{0.0500bp}%
+    \ifx\gptboxheight\undefined%
+      \newlength{\gptboxheight}%
+      \newlength{\gptboxwidth}%
+      \newsavebox{\gptboxtext}%
+    \fi%
+    \setlength{\fboxrule}{0.5pt}%
+    \setlength{\fboxsep}{1pt}%
+    \definecolor{tbcol}{rgb}{1,1,1}%
+\begin{picture}(14400.00,7200.00)%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%%
+      \put(814,704){\makebox(0,0)[r]{\strut{}$2^{-2}$}}%
+      \put(814,1288){\makebox(0,0)[r]{\strut{}$2^{-1}$}}%
+      \put(814,1871){\makebox(0,0)[r]{\strut{}$2^{0}$}}%
+      \put(814,2455){\makebox(0,0)[r]{\strut{}$2^{1}$}}%
+      \put(814,3038){\makebox(0,0)[r]{\strut{}$2^{2}$}}%
+      \put(814,3622){\makebox(0,0)[r]{\strut{}$2^{3}$}}%
+      \put(814,4205){\makebox(0,0)[r]{\strut{}$2^{4}$}}%
+      \put(814,4789){\makebox(0,0)[r]{\strut{}$2^{5}$}}%
+      \put(814,5372){\makebox(0,0)[r]{\strut{}$2^{6}$}}%
+      \put(814,5956){\makebox(0,0)[r]{\strut{}$2^{7}$}}%
+      \put(814,6539){\makebox(0,0)[r]{\strut{}$2^{8}$}}%
+      \put(946,484){\makebox(0,0){\strut{}$0$}}%
+      \put(2252,484){\makebox(0,0){\strut{}$0.1$}}%
+      \put(3557,484){\makebox(0,0){\strut{}$0.2$}}%
+      \put(4863,484){\makebox(0,0){\strut{}$0.3$}}%
+      \put(6169,484){\makebox(0,0){\strut{}$0.4$}}%
+      \put(7475,484){\makebox(0,0){\strut{}$0.5$}}%
+      \put(8780,484){\makebox(0,0){\strut{}$0.6$}}%
+      \put(10086,484){\makebox(0,0){\strut{}$0.7$}}%
+      \put(11392,484){\makebox(0,0){\strut{}$0.8$}}%
+      \put(12697,484){\makebox(0,0){\strut{}$0.9$}}%
+      \put(14003,484){\makebox(0,0){\strut{}$1$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%%
+      \put(209,3621){\rotatebox{-270}{\makebox(0,0){\large\strut{}$\text{res}_{N}/\text{res}_{2N}$}}}%
+      \put(7474,154){\makebox(0,0){\large\strut{}$r/R$}}%
+      \csname LTb\endcsname%%
+      \put(2794,2637){\makebox(0,0)[r]{\strut{}Euler $n=1.0$}}%
+      \csname LTb\endcsname%%
+      \put(2794,2417){\makebox(0,0)[r]{\strut{}Poisson $n=1.0$}}%
+      \csname LTb\endcsname%%
+      \put(2794,2197){\makebox(0,0)[r]{\strut{}Euler $n=1.5$}}%
+      \csname LTb\endcsname%%
+      \put(2794,1977){\makebox(0,0)[r]{\strut{}Poisson $n=1.5$}}%
+      \csname LTb\endcsname%%
+      \put(2794,1757){\makebox(0,0)[r]{\strut{}Euler $n=3.0$}}%
+      \csname LTb\endcsname%%
+      \put(2794,1537){\makebox(0,0)[r]{\strut{}Poisson $n=3.0$}}%
+      \csname LTb\endcsname%%
+      \put(7474,6869){\makebox(0,0){\Large\strut{}Scaling of Residuals in Background Equations, scale factor = 2}}%
+    }%
+    \gplbacktext
+    \put(0,0){\includegraphics[width={720.00bp},height={360.00bp}]{./chapter2/graphs/scale_all_phys.eps}}%
+    \gplfronttext
+  \end{picture}%
+\endgroup
